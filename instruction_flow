@@ -1,0 +1,142 @@
+main():
+    mode = "OBS"
+    simulation = Model():
+        simulation.topology = read_gml(TOPOLOGY)
+        simulation.topology[A][B]['delay'] = simulation.topology[A][B]['weight'] / (300e+3 / 1.5)
+        simulation.topology[A][C]['delay'] = simulation.topology[A][C]['weight'] / (300e+3 / 1.5)
+        simulation.topology[A][H]['delay'] = simulation.topology[A][H]['weight'] / (300e+3 / 1.5)
+        simulation.topology[B][C]['delay'] = simulation.topology[B][C]['weight'] / (300e+3 / 1.5)
+        simulation.topology[B][D]['delay'] = simulation.topology[B][D]['weight'] / (300e+3 / 1.5)
+        simulation.topology[C][F]['delay'] = simulation.topology[C][F]['weight'] / (300e+3 / 1.5)
+        simulation.topology[D][K]['delay'] = simulation.topology[D][K]['weight'] / (300e+3 / 1.5)
+        simulation.topology[D][E]['delay'] = simulation.topology[D][E]['weight'] / (300e+3 / 1.5)
+        simulation.topology[E][F]['delay'] = simulation.topology[E][F]['weight'] / (300e+3 / 1.5)
+        simulation.topology[E][G]['delay'] = simulation.topology[E][G]['weight'] / (300e+3 / 1.5)
+        simulation.topology[F][J]['delay'] = simulation.topology[F][J]['weight'] / (300e+3 / 1.5)
+        simulation.topology[F][M]['delay'] = simulation.topology[F][M]['weight'] / (300e+3 / 1.5)
+        simulation.topology[G][H]['delay'] = simulation.topology[G][H]['weight'] / (300e+3 / 1.5)
+        simulation.topology[H][I]['delay'] = simulation.topology[H][I]['weight'] / (300e+3 / 1.5)
+        simulation.topology[I][J]['delay'] = simulation.topology[I][J]['weight'] / (300e+3 / 1.5)
+        simulation.topology[I][L]['delay'] = simulation.topology[I][L]['weight'] / (300e+3 / 1.5)
+        simulation.topology[I][N]['delay'] = simulation.topology[I][N]['weight'] / (300e+3 / 1.5)
+        simulation.topology[K][L]['delay'] = simulation.topology[K][L]['weight'] / (300e+3 / 1.5)
+        simulation.topology[K][N]['delay'] = simulation.topology[K][N]['weight'] / (300e+3 / 1.5)
+        simulation.topology[L][M]['delay'] = simulation.topology[L][M]['weight'] / (300e+3 / 1.5)
+        simulation.topology[M][N]['delay'] = simulation.topology[M][N]['weight'] / (300e+3 / 1.5)
+        simulation.routes = all_pairs_dijkstra_path(simulation.topology)
+    theseed = 1
+    print 'Using ' + "OBS" + ' mode.'
+    loop(x18, rate_increase=70x10³):
+    
+-----------------------------------------------------ONE-LOOP-----------------------------------------------------------
+
+    	print 'rate delivered droped'
+    	delivered, droped = simulation.run(1, 140x10³):
+*  			Simulation.initialize(self)
+			simulation.ndelivery = 0
+   		    simulation.ndrop = 0
+       		simulation.nodes = {}
+       	    simulation.nodes[0].rid = 0
+       		simulation.nodes[0].links = { 1 : [0] * 8, 2 : [0] * 8, 7 : [0] * 8}
+       	    simulation.nodes[1].rid = 1
+       		simulation.nodes[1].links = { 0 : [0] * 8, 2 : [0] * 8, 3 : [0] * 8}
+       	    simulation.nodes[2].rid = 2
+       		simulation.nodes[2].links = { 0 : [0] * 8, 1 : [0] * 8, 5 : [0] * 8}
+       	    simulation.nodes[3].rid = 3
+       		simulation.nodes[3].links = { 1 : [0] * 8, 4 : [0] * 8, 10 : [0] * 8}
+       	    simulation.nodes[4].rid = 4
+       		simulation.nodes[4].links = { 3 : [0] * 8, 5 : [0] * 8, 6 : [0] * 8}
+       	    simulation.nodes[5].rid = 5
+       		simulation.nodes[5].links = { 2 : [0] * 8, 4 : [0] * 8, 9 : [0] * 8, 12 : [0] * 8}
+       	    simulation.nodes[6].rid = 6
+       		simulation.nodes[6].links = { 4 : [0] * 8, 7 : [0] * 8}
+       	    simulation.nodes[7].rid = 7
+       		simulation.nodes[7].links = { 0 : [0] * 8, 6 : [0] * 8, 8 : [0] * 8}
+       	    simulation.nodes[8].rid = 8
+       		simulation.nodes[8].links = { 7 : [0] * 8, 9 : [0] * 8, 11 : [0] * 8, 13 : [0] * 8}
+       	    simulation.nodes[9].rid = 9
+       		simulation.nodes[9].links = { 5 : [0] * 8, 8 : [0] * 8}
+       	    simulation.nodes[10].rid = 10
+       		simulation.nodes[10].links = { 3 : [0] * 8, 11 : [0] * 8, 13 : [0] * 8}
+       	    simulation.nodes[11].rid = 11
+       		simulation.nodes[11].links = { 8 : [0] * 8, 10 : [0] * 8, 12 : [0] * 8}
+       	    simulation.nodes[12].rid = 12
+       		simulation.nodes[12].links = { 5 : [0] * 8, 11 : [0] * 8, 13 : [0] * 8}
+       	    simulation.nodes[13].rid = 13
+       		simulation.nodes[13].links = { 8 : [0] * 8, 10 : [0] * 8, 12 : [0] * 8}
+        	traffic_generator = TrafficGenerator(simulation, 1):
+*        		Process.__init__(traffic_generator, sim=simulation)
+        		traffic_generator.rand = Random(1)
+*        	simulation.activate(traffic_generator, traffic_generator.generate(140x10³):
+        		count = 0
+        		nodes = traffic_generator.sim.topology.nodes()
+        		while count < 1x10³x10³:
+            		count += 1
+*            		yield hold, traffic_generator, traffic_generator.rand.expovariate(140x10³)
+            		src, dst = traffic_generator.rand.sample(nodes, 2)
+            		route = traffic_generator.sim.routes[src][dst]
+            		size = 100e-06 * traffic_generator.rand.expovariate(1)
+            		offset = 2.5e-06 * len(route)
+            		bh = BurstHeader(traffic_generator.sim, count, size, offset):
+*            			Process.__init__(bh, sim=traffic_generator.sim)
+        				bh.bid = count
+        				bh.size = size
+        				bh.offset = offset
+*            		traffic_generator.sim.activate(bh, bh.run(route):
+            			propagation = 0
+        				for i in xrange(len(route)-1):
+            				bh.offset -= 2.5e-06
+*            				yield hold, bh, propagation + 2.5e-06
+*            				bh.burst_arrival = bh.sim.now() + bh.offset
+            				bh.nxt = route[i+1]
+            				if (not bh.sim.nodes[route[i]].schedule(bh):
+            					assert bh.offset > 0
+						        channels = bh.sim.nodes[route[i]].links[bh.nxt]
+						        for index, horizon in enumerate(channels):
+    						        if horizon < bh.burst_arrival:
+                						channels[index] = bh.burst_arrival + bh.size
+										return True
+           						 else:
+       							        return False
+            				):
+                				bh.sim.ndrop += 1
+                				break
+            				propagation = bh.sim.topology[route[i]][route[i+1]]['delay']
+        				else:
+            				bh.sim.ndelivery += 1
+            		)
+            )
+*        	simulation.simulate(until=10x10³)
+        	return simulation.ndelivery, simulation.ndrop
+        	
+-----------------------------------------------------ONE-LOOP-----------------------------------------------------------
+
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped
+    	delivered, droped = simulation.run(theseed, rate):
+    	theseed += 1
+    	print rate, delivered, droped

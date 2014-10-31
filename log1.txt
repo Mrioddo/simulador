@@ -1,0 +1,87 @@
+---------------TUNNABLE PARAMETERS---------------------
+NUMBER_OF_WAVELENGTHS = 32
+LINK_WAVELENGTH_CAPACITY = 10000
+NUMBER_OF_FLUX_ARRIVALS = 1000000000.0
+
+-----------------OTHER PARAMETERS----------------------
+MINIMUM_FLUX_SIZE = 1167200.0
+MAXIMUM_FLUX_SIZE = 9337600.0
+MEAN_FLUX_ARRIVAL_INTERVAL = 0.000222
+AVERAGE_PACKET_SIZE = 11672.0
+MEAN_INTERVAL_OF_PACKET_ARRIVAL = 0.015
+FIXED_ASSEMBLY_PERIOD = 0.02
+
+---------------STARTING SIMULATION---------------------
+	delivered	droped   	energy   
+burst	46349     	0         	0.126370717392 W in 654.269164427 seconds
+circuit	8306      	541       	13.46688 MW per hour for 14 nodes
+total	54655     	541       
+OBS flux counter: 11.53%	-> 1153
+OCS flux counter: 88.47%	-> 8847
+
+	delivered	droped   	energy   
+burst	58794     	0         	0.572459347291 W in 621.735566418 seconds
+circuit	4398      	521       	13.46688 MW per hour for 14 nodes
+total	63192     	521       
+OBS flux counter: 50.81%	-> 5081
+OCS flux counter: 49.19%	-> 4919
+
+	delivered	droped   	energy   
+burst	53913     	0         	0.267348122183 W in 698.702553952 seconds
+circuit	7121      	483       	13.46688 MW per hour for 14 nodes
+total	61034     	483       
+OBS flux counter: 23.96%	-> 2396
+OCS flux counter: 76.04%	-> 7604
+
+	delivered	droped   	energy   
+burst	58696     	0         	0.590090405279 W in 618.031275062 seconds
+circuit	4183      	616       	13.46688 MW per hour for 14 nodes
+total	62879     	616       
+OBS flux counter: 52.01%	-> 5201
+OCS flux counter: 47.99%	-> 4799
+
+	delivered	droped   	energy   
+burst	58576     	0         	0.579181657623 W in 520.441099618 seconds
+circuit	4197      	554       	13.46688 MW per hour for 14 nodes
+total	62773     	554       
+OBS flux counter: 52.49%	-> 5249
+OCS flux counter: 47.51%	-> 4751
+
+	delivered	droped   	energy   
+burst	59083     	0         	0.602533481837 W in 663.690783862 seconds
+circuit	4112      	616       	13.46688 MW per hour for 14 nodes
+total	63195     	616       
+OBS flux counter: 52.72%	-> 5272
+OCS flux counter: 47.28%	-> 4728
+
+	delivered	droped   	energy   
+burst	53173     	0         	0.253342999807 W in 616.523154749 seconds
+circuit	7134      	492       	13.46688 MW per hour for 14 nodes
+total	60307     	492       
+OBS flux counter: 23.74%	-> 2374
+OCS flux counter: 76.26%	-> 7626
+
+	delivered	droped   	energy   
+burst	58659     	0         	0.583444476641 W in 535.562874852 seconds
+circuit	4186      	554       	13.46688 MW per hour for 14 nodes
+total	62845     	554       
+OBS flux counter: 52.6%	-> 5260
+OCS flux counter: 47.4%	-> 4740
+
+	delivered	droped   	energy   
+burst	58729     	0         	0.562890897486 W in 540.334917907 seconds
+circuit	4320      	546       	13.46688 MW per hour for 14 nodes
+total	63049     	546       
+OBS flux counter: 51.34%	-> 5134
+OCS flux counter: 48.66%	-> 4866
+
+	delivered	droped   	energy   
+burst	58720     	0         	0.573661256986 W in 464.82165217 seconds
+circuit	4162      	574       	13.46688 MW per hour for 14 nodes
+total	62882     	574       
+OBS flux counter: 52.64%	-> 5264
+OCS flux counter: 47.36%	-> 4736
+
+mean deliveries: 61681.1
+mean drops: 549.7
+
